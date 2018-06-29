@@ -1,0 +1,297 @@
+@font-face {
+	font-family: "Lazer";
+	src: url("../assets/Fonts/Lazer84.eot") format("eot"),
+		 url("../assets/Fonts/Lazer84.woff2") format("woff2"),
+		 url("../assets/Fonts/lazer84.woff") format("woff"),
+		 url("../assets/Fonts/Lazer84.ttf") format("truetype"),
+		 url("../assets/Fonts/lazer84.svg#Samplino") format("svg");
+}
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+// Fonts
+$Open: 'Open Sans', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+$Lazer: 'Lazer', cursive;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-normal-italic: 400i;
+$font-weight-bold: 700;
+
+// Primary Colors
+$green: #5fcf80;
+$red: #FF686B;
+$white: #FFFFFF;
+$black: #282828;
+
+// Accent Colors
+$aqua: #84DCC6;
+$salmon: #FFA69E;
+
+// Z-Indices
+$basement: -1;
+$ground-floor: 0;
+$first-floor: 100;
+$second-floor: 200;
+$third-floor: 300;
+$fourth-floor: 400;
+$fifth-floor: 500;
+$tenth-floor: 1000;
+$roof: 1001;
+
+body, html {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    width:1100px;
+}
+
+// Heading Sizes & fonts
+h1, h2, h3, h4, h5, h6, a, p {
+    font-weight: $font-weight-normal;
+    margin: 0px;
+    color: $white;
+}
+
+h1, h2, h3, h4 {
+    font-family: $Roboto;
+    color: $white;
+}
+
+h5, h6 {
+    font-family: $Open;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+h1 {
+    font-weight: $font-weight-bold;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 32px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h5 {
+    font-weight: $font-weight-bold;
+}
+
+p {
+    font-family: $Open;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-family: $Open;
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: none;
+    color: $black;
+}
+
+
+@mixin lt-sm {
+    @media screen and (max-width: 499px) {
+        @content;
+    }
+}
+
+@mixin lt-x-sm {
+    @media screen and (max-width: 350px) {
+        @content;
+    }
+}
+
+@mixin lt-x2-sm {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin gt-x2-sm {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin gt-sm {
+    @media screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin lt-md {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin lt-x-md {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin gt-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin gt-x-md {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin bt-md-lg {
+    @media screen and (min-width: 750px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin lt-lg {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin lt-x-lg {
+    @media screen and (max-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin gt-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin lt-xl {
+    @media screen and (max-width: 1399px) {
+        @content;
+    }
+}
+
+@mixin bt-lg-xl {
+    @media screen and (min-width: 1024px) and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin gt-xl {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin gt-xxl {
+    @media screen and (min-width: 2000px) {
+        @content;
+    }
+}
+
+@mixin full-width {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+@mixin clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin block {
+    margin: 0 0 80px;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @include lt-md {
+        margin-bottom: 40px;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &.placeholder {
+        @content;
+    }
+}
+
+@mixin unselectable {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@mixin absolute-full {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@mixin grayscale {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    -webkit-filter: grayscale(1); 
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; 
+}

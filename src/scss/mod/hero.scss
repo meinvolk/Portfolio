@@ -1,0 +1,83 @@
+.general-hero {
+    .hero-image {
+        background-image: url(../assets/Hero.jpg);
+        height:100vh;
+        background-size: cover;
+        display: flex;
+        .hero-content{
+            margin: auto;
+            position: relative;
+            bottom: 30px;
+            &:before {
+                content: "";
+                background-color: rgba(0, 0, 0, 0.6);
+                position: absolute;
+                padding: 155px 200px;
+                border-radius: 15px;
+                width: 300px;
+                display: block;
+                margin: auto;
+                left: 11%;
+                border: 1px solid $red;
+            }
+            h1 {
+                font-size: 80px;
+                color: $white;
+                font-family: $Lazer;
+                -webkit-filter: drop-shadow(3px 3px 0 #000);
+                filter: drop-shadow(3px 3px 0 #000);
+                -webkit-filter: drop-shadow(.25rem .25rem 0 #000);
+                filter: drop-shadow(.25rem .25rem 0 #000);
+                background-image: linear-gradient(90deg,#f038b3 4%,#f28e5c 28%,#f0dd3f 47%,#8ae98b 72%,#38c8ef 98%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                line-height: 125px;
+                padding: 0 15px;
+                letter-spacing: 4px;
+            }
+            h2 {
+                text-align: center;
+                max-width: 535px;
+                padding: 15px 0 20px 0;
+                margin: auto;
+                font-size: 22px;
+                position: relative;
+            }
+            .list-icons {
+                text-align: center;
+                border-top: 1px solid white;
+                padding: 25px 0 0 0;
+                position: relative;
+                max-width: 54%;
+                margin: auto;
+                a {
+                    padding: 0 15px;
+                    font-size: 35px;
+                    color: white;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+            
+        }
+        .down-icon {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 49%;
+            a{
+                color:white;
+                font-size: 35px;
+                i{
+                    animation-delay: 2.3s;
+                }
+                &:hover{
+                    color: $red;
+                }
+            }
+        }
+    }
+}
