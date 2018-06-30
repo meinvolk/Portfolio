@@ -1,4 +1,4 @@
-# gatsby-starter-default
+# Portfolio
 William Bensinger personal portfolio
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components]
