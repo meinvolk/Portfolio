@@ -12,6 +12,10 @@ header{
         padding:5px 0;
         z-index: $first-floor;
         position: relative;
+        @include lt-sm {
+            text-align: center;
+            width: 100%;
+        }
         li{
             display: inline-block;
             padding: 0 20px;
@@ -34,6 +38,9 @@ header{
                 &:hover{
                     color: $red;
                 }
+            }
+            @include lt-sm {
+                padding: 0 6px;
             }
         }
     }
