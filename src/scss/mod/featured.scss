@@ -9,4 +9,17 @@
         padding: 100px 0;
         line-height: 50px;
     }
+    .feature-block-item{
+        text-align: center;
+        color:$white;
+        h3 {
+            font-family: $Lazer;
+            color: $red;
+            padding: 0 0 20px 0;
+        }
+        i {
+            font-size: 45px;
+            padding: 0 0 20px 0;
+        }
+    }
 }
