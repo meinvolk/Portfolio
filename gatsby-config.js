@@ -13,6 +13,8 @@ module.exports = {
         name: 'posts',
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
   ],
 }

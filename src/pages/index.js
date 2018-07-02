@@ -14,16 +14,18 @@ class IndexPage extends React.Component {
         <Navigation></Navigation>
         <Hero></Hero>
         <Featured></Featured>
-        {posts.map(({ node }) => {
-          
-          return (
-            <div>
-               <h1>{node.frontmatter.title}</h1>
-               <div dangerouslySetInnerHTML={{__html: node.html}}/>
-            </div>
-          )
-          
-        })}
+        <div className='row'>
+          {posts.map(({ node }) => {
+            return (
+              <article className="col-md-4">
+                <Link to={node.frontmatter.path}>
+                  <h4>{node.frontmatter.title}</h4>
+                  <div dangerouslySetInnerHTML={{__html: node.html}}/>
+                </Link>
+              </article>
+            )
+          })}
+        </div>
       </div>
     )
   }
