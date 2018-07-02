@@ -5,8 +5,9 @@ import 'font-awesome/css/font-awesome.min.css'
 const Featured = () => (
 
     <div id="page-down" className="feature-block">
+        <div className="container"> 
         <h2>This is going to be the tagline for the featured text block and an important statement to my audience.</h2>
-        <div className="container">
+        
             <div className="row">
                 <div className="feature-block-item col-md-4">
                     <i className="fa fa-paint-brush"></i>

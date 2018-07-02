@@ -2,16 +2,19 @@
     background-color: $black;
     h2 {
         font-size: 28px;
-        max-width: 57%;
         display: block;
         margin: auto;
         text-align: center;
-        padding: 100px 0;
+        padding: 100px 75px;
         line-height: 50px;
+        @include lt-md {
+            padding: 100px 0px;
+        }
     }
     .feature-block-item{
         text-align: center;
         color:$white;
+        padding: 0 15px 80px 15px;
         h3 {
             font-family: $Lazer;
             color: $red;
