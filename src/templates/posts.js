@@ -7,10 +7,12 @@ export default function Template({data}) {
     const { markdownRemark: post } = data;
 
     return (
-        <div>
+        <div className='post-page'>
             <Navigation></Navigation>
-            <h1>{post.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{__html: post.html}}/>
+            <div className='container'>
+                <h1>{post.frontmatter.title}</h1>
+                <div dangerouslySetInnerHTML={{__html: post.html}}/>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 import Hero from '../components/hero'
 import Navigation from '../components/navigation'
 import Featured from '../components/featured'
@@ -19,8 +20,8 @@ class IndexPage extends React.Component {
             return (
               <article className="col-md-4">
                 <Link to={node.frontmatter.path}>
-                  <h4>{node.frontmatter.title}</h4>
-                  <div dangerouslySetInnerHTML={{__html: node.html}}/>
+                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.responsiveSizes} />
+                  <p>{node.frontmatter.featuredText}</p>
                 </Link>
               </article>
             )
@@ -42,9 +43,19 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
+            featuredText
+            featuredImage {
+              childImageSharp {
+                responsiveSizes(maxWidth: 400) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
           }
         }
       }
     }
   }
-`
+`;

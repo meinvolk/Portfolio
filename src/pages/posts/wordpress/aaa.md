@@ -2,6 +2,7 @@
 path: '/aaa'
 title: 'AAA'
 featuredImage: './AAA_Featured.jpg'
+featuredText: 'AAA is a concrete pouring company who specializes in custom stonework.'
 ---
 
 # AAA Poured Walls
