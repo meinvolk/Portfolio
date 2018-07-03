@@ -18,10 +18,12 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 590,
-            },
+              quality: 80,
+              maxWidth: 600,
+              linkImagesToOriginal: false
+            }
           },
           'gatsby-remark-copy-linked-files'
         ],

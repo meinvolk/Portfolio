@@ -1,7 +1,7 @@
 ---
 path: '/vans-carwash'
 title: 'Vans Carwash'
-featuredImage: './AAA_Featured.jpg'
+featuredImage: './VANS_Featured.jpg'
 featuredText: 'Van’s Car Wash is a local car wash chain serving seven locations across the West Michigan area.'
 ---
 
@@ -16,3 +16,5 @@ I had a lot of fun designing this site and feel that it is clean and sharp. The 
 ##Development
 
 The site was developed in WordPress. No theme was used to create this site. I used a blank template and started from scratch. There was no blog or post types, so development of the site was primarily kept to HTML, CSS, and Javascript. By using Advances Custom Fields plugin, I was able to make it so the owner could easily come in and swap the coupon pictures out. The purpose of a CMS is to bring ease of use to the client and that is just what Van’s Car Wash does.
+
+![Vans Carwash](./VANS_Full.jpg)
