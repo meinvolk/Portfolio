@@ -15,16 +15,16 @@ class IndexPage extends React.Component {
         <Navigation></Navigation>
         <Hero></Hero>
         <Featured></Featured>
-        <div className='row'>
+        <div className='row featured-blog'>
           {posts.map(({ node }) => {
             return (
-              <article className="col-md-4">
+              <article key ={node.frontmatter.title} className="col-md-4">
                 <Link to={node.frontmatter.path}>
-                  <Img sizes={node.frontmatter.featuredImage.childImageSharp.responsiveSizes} />
+                  <Img resolutions={node.frontmatter.featuredImage.childImageSharp.resolutions}/>
                   <p>{node.frontmatter.featuredText}</p>
                 </Link>
               </article>
-            )
+            );
           })}
         </div>
       </div>
@@ -46,10 +46,8 @@ export const pageQuery = graphql`
             featuredText
             featuredImage {
               childImageSharp {
-                responsiveSizes(maxWidth: 400) {
-                  src
-                  srcSet
-                  sizes
+                resolutions(width: 300) {
+                  ...GatsbyImageSharpResolutions
                 }
               }
             }
