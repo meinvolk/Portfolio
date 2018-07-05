@@ -1,17 +1,24 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import Navigation from '../components/navigation'
-
+import Img from 'gatsby-image'
 
 export default function Template({data}) {
     const { markdownRemark: post } = data;
 
     return (
-        <div className='post-page'>
+        <div>
             <Navigation></Navigation>
-            <div className='container'>
-                <h1>{post.frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{__html: post.html}}/>
+            <div className='post-page'>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-8'>
+                            <div dangerouslySetInnerHTML={{__html: post.html}}/>
+                        </div>
+                        <div className='col-md-4'>
+                            <Img sizes={post.frontmatter.sidebarImage.childImageSharp.sizes}/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
@@ -24,6 +31,13 @@ export const postQuery = graphql`
             frontmatter {
                 path
                 title
+                sidebarImage {
+                    childImageSharp {
+                      sizes(maxWidth: 600) {
+                        ...GatsbyImageSharpSizes
+                      }
+                    }
+                }
             }
         }
     }

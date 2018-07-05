@@ -15,17 +15,21 @@ class IndexPage extends React.Component {
         <Navigation></Navigation>
         <Hero></Hero>
         <Featured></Featured>
-        <div className='row featured-blog'>
-          {posts.map(({ node }) => {
-            return (
-              <article key ={node.frontmatter.title} className="col-md-4">
-                <Link to={node.frontmatter.path}>
-                  <Img resolutions={node.frontmatter.featuredImage.childImageSharp.resolutions}/>
-                  <p>{node.frontmatter.featuredText}</p>
-                </Link>
-              </article>
-            );
-          })}
+        {/* Create this as its own component, will need onclick events */}
+        <div className='container'>
+          <div className='row project-block'>
+            {posts.map(({ node }) => {
+              if(node.frontmatter.category === 'wordpress'){
+                return (
+                  <article key ={node.frontmatter.title} className="col-md-4">
+                    <Link to={node.frontmatter.path}>
+                      <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes}/>
+                    </Link>
+                  </article>
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
     )
@@ -36,18 +40,19 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark( limit: 6) {
       edges {
         node {
           html
           frontmatter {
             path
             title
+            category
             featuredText
             featuredImage {
               childImageSharp {
-                resolutions(width: 300) {
-                  ...GatsbyImageSharpResolutions
+                sizes(maxWidth: 390) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }
