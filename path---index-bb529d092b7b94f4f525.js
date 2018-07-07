@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{339:function(t,a){t.exports={data:{allMarkdownRemark:{edges:[{node:{html:"<p>HELLO! This is our first blog post</p>",frontmatter:{path:"/aaa",title:"AAA"}}},{node:{html:"<p>HELLO! This is our first blog post</p>",frontmatter:{path:"/vans-carwash",title:"Vans Carwash"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---index-bb529d092b7b94f4f525.js.map

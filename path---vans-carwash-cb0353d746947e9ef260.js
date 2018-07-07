@@ -1,2 +1,0 @@
-webpackJsonp([0x7d23e505a289],{340:function(a,t){a.exports={data:{markdownRemark:{html:"<p>HELLO! This is our first blog post</p>",frontmatter:{path:"/vans-carwash",title:"Vans Carwash"}}},pathContext:{}}}});
-//# sourceMappingURL=path---vans-carwash-cb0353d746947e9ef260.js.map
