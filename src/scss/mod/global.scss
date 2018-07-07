@@ -24,7 +24,7 @@ $font-weight-bold: 700;
 // Primary Colors
 $green: #5fcf80;
 $red: #FF686B;
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #282828;
 
 // Accent Colors
@@ -54,6 +54,12 @@ body, html {
 .gatsby-image-outer-wrapper, 
 .gatsby-image-wrapper {
   height: 100%; 
+}
+
+.btn-dark {
+    width: 150px;
+    background-color: #4d4d4d;
+    border-radius: 8px;
 }
 
 // Heading Sizes & fonts
@@ -90,6 +96,10 @@ h2 {
 h3 {
     font-size: 28px;
     line-height: 36px;
+    font-family: $Lazer;
+    color: $red;
+    padding: 0 0 20px 0;
+    word-spacing: 6px;
 }
 
 h4 {

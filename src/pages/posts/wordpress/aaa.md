@@ -1,7 +1,7 @@
 ---
 path: '/aaa'
 title: 'AAA'
-category: 'wordpress'
+category: 'cms'
 featuredImage: './AAA_Featured.jpg'
 sidebarImage: './AAA.jpg'
 featuredText: 'AAA is a concrete pouring company who specializes in custom stonework.'

@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../components/hero'
 import Navigation from '../components/navigation'
 import Featured from '../components/featured'
-import {Projects, ProjectsNav} from '../components/projects'
+import {ProjectsNav} from '../components/projects'
 
 
 export default ({ data }) => {
@@ -11,17 +11,8 @@ export default ({ data }) => {
         <Navigation />
         <Hero />
         <Featured />
-        
-        
         <div className='container projects-block'>
-          <ProjectsNav />
-          <div className='row'>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <div key={node.id} className="col-md-4">
-                <Projects frontmatter={node.frontmatter} />
-              </div>
-            ))}
-          </div>
+          <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
         </div>
     </div>
   );
@@ -29,7 +20,7 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark( limit: 6) {
+    allMarkdownRemark {
       edges {
         node {
           id
