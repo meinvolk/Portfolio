@@ -4,7 +4,6 @@ import Navigation from '../components/navigation'
 import Featured from '../components/featured'
 import {ProjectsNav} from '../components/projects'
 
-
 export default ({ data }) => {
   return (
     <div>
