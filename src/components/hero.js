@@ -18,7 +18,7 @@ const Hero = () => (
             
         </div>
         <div className="down-icon">
-            <Link to="#page-down"><i className="fa fa-chevron-circle-down animated bounce"></i></Link>
+            <Link data-scroll to="#page-down"><i className="fa fa-chevron-circle-down animated bounce"></i></Link>
         </div>
     </div>
 </div>

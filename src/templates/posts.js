@@ -14,7 +14,7 @@ export default function Template({data}) {
                         <div className='col-md-8'>
                             <div dangerouslySetInnerHTML={{__html: post.html}}/>
                         </div>
-                        <div className='col-md-4'>
+                        <div className='col-md-4 sidebar'>
                             <Img sizes={post.frontmatter.sidebarImage.childImageSharp.sizes}/>
                         </div>
                     </div>

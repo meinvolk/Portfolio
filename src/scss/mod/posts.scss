@@ -1,3 +1,16 @@
 .post-page{
     padding: 75px 0 0 0;
+    h1 {
+        font-family:$Lazer;
+        color:$red;
+        word-spacing: 6px;
+    }
+    h2 {
+        color: $black;
+    }
+    .sidebar{
+        .gatsby-image-wrapper {
+            box-shadow: 0px 0px 5px 2px #eee;
+        }
+    }
 }

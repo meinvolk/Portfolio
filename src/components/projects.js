@@ -1,7 +1,6 @@
 import React, { Component }  from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import $ from 'jquery'
 
 class ProjectsNav extends Component {
   constructor(props) {
@@ -57,9 +56,7 @@ class Projects extends Component {
   }
 }
 
-module.exports = {
-    ProjectsNav: ProjectsNav
-}
+module.exports = ProjectsNav
 
 export const ProjectQuery = graphql`
 fragment ProjectQuery on MarkdownRemark{

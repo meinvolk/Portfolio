@@ -44,7 +44,7 @@ $roof: 1001;
 
 body, html {
     margin: 0;
-    background-color: $black;
+    //background-color: $black;
 }
 
 .container{
@@ -57,22 +57,28 @@ body, html {
 }
 
 .btn-dark {
+    color: $white;
     width: 150px;
     background-color: #4d4d4d;
     border-radius: 8px;
+    &:hover {
+        -webkit-animation: bounceIn 1s;
+        animation: bounceIn 1s;
+    }
 }
 
 // Heading Sizes & fonts
 h1, h2, h3, h4, h5, h6, a, p {
     font-weight: $font-weight-normal;
     margin: 0px;
-    color: $white;
+    color: $black;
     padding: 10px 0;
 }
 
-h1, h2, h3, h4 {
-    font-family: $Roboto;
-    color: $white;
+h1, h3 {
+    font-family: $Lazer;
+    -webkit-filter: drop-shadow(2px 2px 0 #000);
+    filter: drop-shadow(2px 2px 0 #000);
 }
 
 h5, h6 {
@@ -89,6 +95,7 @@ h1 {
 }
 
 h2 {
+    font-family: $Open;
     font-size: 35px;
     line-height: 32px;
 }
@@ -96,13 +103,13 @@ h2 {
 h3 {
     font-size: 28px;
     line-height: 36px;
-    font-family: $Lazer;
     color: $red;
     padding: 0 0 20px 0;
     word-spacing: 6px;
 }
 
 h4 {
+    font-family: $Open;
     font-size: 24px;
     line-height: 32px;
 }
@@ -115,6 +122,7 @@ p {
     font-family: $Open;
     font-size: 18px;
     line-height: 30px;
+    color:$black;
 }
 
 li {

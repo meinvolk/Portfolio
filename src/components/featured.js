@@ -1,9 +1,8 @@
 import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 
 const Featured = () => (
-
     <div id="page-down" className="feature-block">
         <div className="container"> 
         <h2>This is going to be the tagline for the featured text block and an important statement to my audience.</h2>
@@ -17,7 +16,7 @@ const Featured = () => (
                 <div className="feature-block-item col-md-4">
                     <i className="fa fa-code"></i>
                     <h3>Web Development</h3>
-                    <p>Web development has been the keystone of my education and professional career. Leave the coding to me.</p>
+                    <p>Web development is the keystone of my education and professional career. Leave the coding to me.</p>
                 </div>
                 <div className="feature-block-item col-md-4">
                     <i className="fa fa-cogs"></i>

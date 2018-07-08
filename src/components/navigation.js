@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import Link from 'gatsby-link'
 
-const Navigation = () => (
-    <header>
-        <div>
-            <ul>
-                <li className="animated slideInDown"><Link to="/">Home</Link></li>
-                <li className="animated slideInDown"><Link to="/">Skills</Link></li>
-                <li className="animated slideInDown"><Link to="/">Work</Link></li>
-                <li className="animated slideInDown"><Link to="/page-2">About</Link></li>
-                <li className="animated slideInDown"><Link to="/">Contact</Link></li>
-            </ul>
-        </div>
-    </header>
-)
+class Navigation extends Component {
+    render() {
+        let navItems = ['Home','Skills','Work','About','Contact'];
+        return(
+            <header>
+                <div>
+                    <ul>
+                        {navItems.map((item) => (
+                            <li className="animated slideInDown" key={item}><Link to="/{item}">{item}</Link></li>
+                        ))}
+                    </ul>
+                </div>
+            </header>
+        );
+    }
+};
 
-export default Navigation
+module.exports = Navigation

@@ -25,7 +25,8 @@
     "popper.js": "^1.14.3",
     "react-helmet": "^5.2.0",
     "react-reveal": "^1.2.2",
-    "react-scroll": "^1.7.9"
+    "react-scroll": "^1.7.9",
+    "smooth-scroll": "^14.2.0"
   },
   "keywords": [
     "gatsby"

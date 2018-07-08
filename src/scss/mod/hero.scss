@@ -30,7 +30,6 @@
             h1 {
                 font-size: 80px;
                 color: $white;
-                font-family: $Lazer;
                 -webkit-filter: drop-shadow(3px 3px 0 #000);
                 filter: drop-shadow(3px 3px 0 #000);
                 -webkit-filter: drop-shadow(.25rem .25rem 0 #000);
@@ -60,6 +59,7 @@
                 margin: auto;
                 font-size: 22px;
                 position: relative;
+                color:$white;
                 @include lt-md {
                     max-width: 350px;
                     padding: 0px 0 15px 0;
@@ -95,7 +95,7 @@
         .down-icon {
             text-align: center;
             position: absolute;
-            bottom: 10px;
+            bottom: 25px;
             left: 49%;
             a{
                 color:white;

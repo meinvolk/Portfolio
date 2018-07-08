@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Animate from 'animate.css'
-
+import Animated from 'animate.css'
 import '../scss/index.scss'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 

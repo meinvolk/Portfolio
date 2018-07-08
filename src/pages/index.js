@@ -2,9 +2,11 @@ import React from 'react'
 import Hero from '../components/hero'
 import Navigation from '../components/navigation'
 import Featured from '../components/featured'
-import {ProjectsNav} from '../components/projects'
+import ProjectsNav from '../components/projects'
+import SmoothScroll from 'smooth-scroll'
 
 export default ({ data }) => {
+  new SmoothScroll('a[href*="#"]');
   return (
     <div>
         <Navigation />
