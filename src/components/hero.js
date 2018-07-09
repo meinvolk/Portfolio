@@ -15,10 +15,9 @@ const Hero = () => (
                 <Link to="https://www.instagram.com/bensingerbilly/" target="_blank"><i className="fa fa-instagram"></i></Link>
                 <Link to="https://www.facebook.com/billy.bensinger.9" target="_blank"><i className="fa fa-facebook-f"></i></Link>
             </div>
-            
         </div>
         <div className="down-icon">
-            <Link data-scroll to="#page-down"><i className="fa fa-chevron-circle-down animated bounce"></i></Link>
+            <a data-scroll href="#page-down"><i className="fa fa-chevron-circle-down animated bounce"></i></a>
         </div>
     </div>
 </div>
