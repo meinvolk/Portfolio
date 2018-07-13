@@ -4,15 +4,15 @@ import Navigation from '../components/navigation'
 import Featured from '../components/featured'
 import Footer from '../components/footer'
 import ProjectsNav from '../components/projects'
-import SmoothScroll from 'smooth-scroll'
+import Contact from '../components/contact'
 
 export default ({ data }) => {
-  new SmoothScroll('a[href*="#"]');
   return (
     <div>
         <Navigation />
         <Hero />
         <Featured />
+        <Contact />
         <div className='container projects-block'>
           <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
         </div>

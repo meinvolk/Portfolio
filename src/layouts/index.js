@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 
 const Layout = ({ children, data }) => (
   <div>
-
+    
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[

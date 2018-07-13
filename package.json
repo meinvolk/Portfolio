@@ -25,17 +25,16 @@
     "popper.js": "^1.14.3",
     "react-helmet": "^5.2.0",
     "react-reveal": "^1.2.2",
-    "react-scroll": "^1.7.9",
-    "smooth-scroll": "^14.2.0"
+    "react-scrollable-anchor": "^0.6.1"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "deploy": "rm -r ./.cache/* && gatsby build --prefix-paths && gh-pages -d public",
+    "build": "rm -r ./.cache/* && gatsby build",
+    "dev": "rm -r ./.cache/* && gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
