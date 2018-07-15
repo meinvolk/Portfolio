@@ -5,14 +5,20 @@ class Contact extends Component {
         return (
             <div className="contact-form">
                 <div className='container'>
-                    <div className='row'>
-                        <form action="https://formspree.io/bensingerbilly@gmail.com" method="POST" >
-                            <input className='col-md-6' type="text" placeholder="Your Name" name="name" />
-                            <input className='col-md-6' type="email" placeholder="Your email ... example@domain.com" name="_replyto" />
-                            <textarea className='col-md-12' name="message" rows="3" placeholder="Your Message" />
+                    <form action="https://formspree.io/bensingerbilly@gmail.com" method="POST" >
+                        <div className='row'>
+                            <div className='col-md-6'>
+                                <input type="text" placeholder="Name" name="name" autoComplete='name'/>
+                            </div>
+                            <div className='col-md-6'>
+                                <input type="email" placeholder="Email" name="_replyto" autoComplete='email'/>
+                            </div>
+                            <div className='col-md-12'>
+                                <textarea name="message" rows="3" placeholder="Message" />
+                            </div>
                             <input type="submit" value="Send" />
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         );

@@ -19,6 +19,9 @@
                 margin: auto;
                 left: 11%;
                 border: 1px solid $red;
+                @include lt-x-md {
+                    padding: 155px 300px;
+                }
                 @include lt-md {
                     width: 0px;
                     padding: 170px 200px;
@@ -42,6 +45,9 @@
                 line-height: 125px;
                 padding: 0 15px;
                 letter-spacing: 4px;
+                @include lt-x-md {
+                    font-size: 65px;
+                }
                 @include lt-md {
                     font-size: 40px;
                 }

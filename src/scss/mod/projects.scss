@@ -6,6 +6,9 @@
         margin: 0 40px 40px;
         cursor: pointer;
         line-height: 20px;
+        @include lt-x2-sm {
+            margin: 0 5px 10px;
+        }
     }
 }
 .projects-block {
@@ -13,6 +16,9 @@
     margin: 100px 0;
     p {
         padding: 20px 115px 55px;
+        @include lt-x-md {
+            padding: 0 0 35px 0;
+        }
     }
     .row > div {
         padding: 10px;
