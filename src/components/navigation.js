@@ -19,22 +19,26 @@ class Navigation extends Component {
     }
 
     updateStatesBasedOnWindowSize() {
+        const isClient = typeof window !== 'undefined';
+        if(isClient){
 
-        const w = window,
+            const w = window,
             d = document,
             documentElement = d.documentElement,
             body = d.getElementsByTagName('body')[0],
             width = w.innerWidth || 
                     documentElement.clientWidth || body.clientWidth
 
-        if (width >= 770) {
-            if (this.state.smallDeviceNavigation) {
-                this.setState({ smallDeviceNavigation: false })
+            if (width >= 770) {
+                if (this.state.smallDeviceNavigation) {
+                    this.setState({ smallDeviceNavigation: false })
+                }
+            } else {
+                if (!this.state.smallDeviceNavigation) {
+                    this.setState({ smallDeviceNavigation: true })
+                }
             }
-        } else {
-            if (!this.state.smallDeviceNavigation) {
-                this.setState({ smallDeviceNavigation: true })
-            }
+            
         }
     }
 
