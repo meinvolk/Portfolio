@@ -18,8 +18,8 @@
         
         input[type=submit] {
             width: 96%;
-            background-color: $salmon;
-            color: white;
+            background-color: #e2e2e2;
+            color: $black;
             padding: 14px 20px;
             margin: 8px auto;
             border: none;
@@ -32,7 +32,7 @@
         }
         
         input[type=submit]:hover {
-            background-color: $red;
+            background-color: $salmon;
         }
     }
 }

@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
+    "nuka-carousel": "^4.3.2",
     "prettier": "^1.12.0"
   },
   "repository": {

@@ -57,13 +57,13 @@ body, html {
 }
 
 .btn-dark {
-    color: $white;
+    color: $black;
     width: 150px;
-    background-color: #4d4d4d;
+    background-color: #e2e2e2;
     border-radius: 8px;
     &:hover {
-        -webkit-animation: bounce 1s;
-        animation: bounce 1s;
+        -webkit-animation: pulse 1s;
+        animation: pulse 1s;
     }
 }
 
