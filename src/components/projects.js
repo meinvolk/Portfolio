@@ -6,10 +6,9 @@ import Carousel from 'nuka-carousel'
 class ProjectsNav extends Component {
   constructor(props) {
     super(props);
-    this.state = { category: 'all', showCarousel: false, carouselKey: 0 };
+    this.state = { category: 'all', showCarousel: false, carouselKey: 0, markDownArray: this.props.allMarkDownFiles };
     this.setCategory = this.setCategory.bind(this);
     this.updateStatesBasedOnWindowSize = this.updateStatesBasedOnWindowSize.bind(this);
-    this.refreshCarousel = this.refreshCarousel.bind(this);
   }
 
   componentWillMount() {
@@ -24,6 +23,7 @@ class ProjectsNav extends Component {
       window.removeEventListener("resize", this.updateStatesBasedOnWindowSize)
   }
 
+  //Used to determin if the viewport is less than 770px, if so we update the state in order to display the carousel.
   updateStatesBasedOnWindowSize() {
       const isClient = typeof window !== 'undefined';
       if(isClient){
@@ -40,39 +40,48 @@ class ProjectsNav extends Component {
       }
   }
   
-  setCategory(e) {
-    this.setState({ category: e });
-    this.refreshCarousel();
-  }
+  //Update the array that corresponds with the correct category.
+  setCategory(e, markDownFiles) {
+    let markDownFilesArray = [];
 
-  refreshCarousel() {
-    this.setState({ carouselKey: Math.random() })
+    markDownFiles.map(({ node }) => {
+
+      if(node.frontmatter.category === e || e === 'all'){
+
+        let markDownFile = { node: {frontmatter: node.frontmatter, id: node.id} }
+        markDownFilesArray.push(markDownFile)
+      }
+    })
+    this.setState({ category: e, markDownArray: markDownFilesArray });
   }
 
   render() {
+
+    let markDownFiles = this.props.allMarkDownFiles;
+    let categoryButtons = ['All', 'CMS', 'E-Commerce', 'Software'];
+
     return (
         <div className='projects-categories'>
           <h3>Web Development  Portfolio</h3>
           <p>From Web Components and UI/UX animations to ASP.NET, E-commerce, CMS systems, and React.JS.
               Check out my latest portfolio projects.</p>
 
-          <h4 onClick={() => this.setCategory('all')} className='btn-dark'>All</h4>
-          <h4 onClick={() => this.setCategory('cms')} className='btn-dark'>CMS</h4>
-          <h4 onClick={() => this.setCategory('ecommerce')} className='btn-dark'>E-Commerce</h4>
-          <h4 onClick={() => this.setCategory('software')} className='btn-dark'>Software</h4>
+          {categoryButtons.map((item) => (
+            <h4 onClick={() => this.setCategory(item.toLowerCase(), markDownFiles)} className='btn-dark'>{item}</h4>
+          ))}
       
           {this.state.showCarousel 
           ? 
             <div className='row'>
               <Carousel key={this.state.carouselKey}> 
-                {this.props.allMarkDownFiles.map(({ node }) => (
+                {this.state.markDownArray.map(({ node }) => (
                     <Project key={node.id} frontmatter={node.frontmatter} categoryState={this.state.category} />
                 ))}
               </Carousel>
             </div>
           : 
             <div className='row'>
-              {this.props.allMarkDownFiles.map(({ node }) => (
+              {this.state.markDownArray.map(({ node }) => (
                 <Project key={node.id} frontmatter={node.frontmatter} categoryState={this.state.category} />
               ))}
             </div>
@@ -85,8 +94,7 @@ class ProjectsNav extends Component {
 
 class Project extends Component {
   render() {
-    if(this.props.categoryState === this.props.frontmatter.category
-    || this.props.categoryState === 'all'){
+    
       return (
         <div className="col-md-4">
           <article key={Math.random()}>
@@ -96,10 +104,6 @@ class Project extends Component {
           </article>
         </div>
       );
-    }
-    else{
-      return null;
-    }
   }
 }
 

@@ -1,7 +1,7 @@
 ---
 path: '/vans-carwash'
 title: 'Vans Carwash'
-category: 'wordpress'
+category: 'cms'
 featuredImage: './VANS_Featured.jpg'
 sidebarImage: './VANS_Full.jpg'
 featuredText: 'Van’s Car Wash is a local car wash chain serving seven locations across the West Michigan area.'

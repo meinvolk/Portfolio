@@ -1,7 +1,7 @@
 ---
 path: '/reliable'
 title: 'Reliable Sport'
-category: 'ecommerce'
+category: 'e-commerce'
 featuredImage: './Reliable_Featured.jpg'
 sidebarImage: './Reliable_Full.jpg'
 featuredText: 'AAA is a concrete pouring company who specializes in custom stonework.'
