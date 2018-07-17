@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{108:function(t,e){t.exports={data:{site:{siteMetadata:{title:"William Bensinger"}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{110:function(t,e){t.exports={data:{site:{siteMetadata:{title:"William Bensinger"}}},layoutContext:{}}}});
 //# sourceMappingURL=path----b40e5591d316de435be6.js.map
