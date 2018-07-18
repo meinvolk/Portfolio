@@ -5,6 +5,7 @@ import Featured from '../components/featured'
 import Footer from '../components/footer'
 import ProjectsNav from '../components/projects'
 import Contact from '../components/contact'
+import Modal from '../components/modal'
 
 export default ({ data }) => {
   return (
