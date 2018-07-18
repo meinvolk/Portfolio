@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Carousel from 'nuka-carousel'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-import Modal from '../components/modal'
 
 class ProjectsNav extends Component {
   constructor(props) {
@@ -53,13 +52,12 @@ class ProjectsNav extends Component {
 
         let markDownFile = { 
           node: { 
-            html: node.html,
             frontmatter: node.frontmatter, 
             id: node.id, 
             randomKey: Math.random() 
           } 
         }
-
+z
         markDownFilesArray.push(markDownFile)
       }
     })
@@ -87,14 +85,14 @@ class ProjectsNav extends Component {
             <div className='row'>
               <Carousel key={this.state.carouselKey}> 
                 {this.state.markDownArray.map(({ node }) => (
-                    <Project key={node.randomKey} node={node} categoryState={this.state.category} />
+                    <Project key={node.randomKey} frontmatter={node.frontmatter} categoryState={this.state.category} />
                 ))}
               </Carousel>
             </div>
           : 
             <div className='row'>
               {this.state.markDownArray.map(({ node }) => (
-                <Project key={node.randomKey} node={node} categoryState={this.state.category} />
+                <Project key={node.randomKey} frontmatter={node.frontmatter} categoryState={this.state.category} />
               ))}
             </div>
           }
@@ -105,38 +103,16 @@ class ProjectsNav extends Component {
 }
 
 class Project extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-  }
-
-  toggleModal = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-
   render() {
+    
       return (
-        
-          <div className="col-md-4">
-          <div onClick={this.toggleModal}>
-            <article >
-              <div >
-                  <Img sizes={this.props.node.frontmatter.featuredImage.childImageSharp.sizes}/>
-              </div>
-            </article>
-            <Modal show={this.state.isOpen}
-                   onClose={this.toggleModal}>
-
-              <div dangerouslySetInnerHTML={{__html: this.props.node.html}}/>
-              
-            </Modal>
-          </div>
-          </div>
-          
-        
+        <div className="col-md-4">
+          <article>
+            <Link to={this.props.frontmatter.path}>
+                <Img sizes={this.props.frontmatter.featuredImage.childImageSharp.sizes}/>
+            </Link>
+          </article>
+        </div>
       );
   }
 }
@@ -145,7 +121,6 @@ module.exports = ProjectsNav
 
 export const ProjectQuery = graphql`
 fragment ProjectQuery on MarkdownRemark{
-    html
     frontmatter {
         path
         title
