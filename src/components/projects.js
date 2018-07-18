@@ -57,7 +57,7 @@ class ProjectsNav extends Component {
             randomKey: Math.random() 
           } 
         }
-z
+        
         markDownFilesArray.push(markDownFile)
       }
     })
