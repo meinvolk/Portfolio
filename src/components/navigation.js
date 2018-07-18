@@ -102,7 +102,7 @@ class DesktopNav extends Component {
             <ul>
                 <li className="animated slideInDown"><Link to='/'>Home</Link></li>
                 {this.props.navItems.map((item) => (
-                    <li className="animated slideInDown" key={item}><Link to={item}>{item}</Link></li>
+                    <li className="animated slideInDown" key={item}><a href={'#' + item}>{item}</a></li>
                 ))}
             </ul>
         );

@@ -17,7 +17,7 @@ const Hero = () => (
             </div>
         </div>
         <div className="down-icon">
-            <a href="#page-down"><i className="fa fa-chevron-circle-down animated bounce"></i></a>
+            <a href="#Skills"><i className="fa fa-chevron-circle-down animated bounce"></i></a>
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@ import React, { Component }  from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Carousel from 'nuka-carousel'
+import ScrollableAnchor, { configureAnchors, removeHash } from 'react-scrollable-anchor'
 
 class ProjectsNav extends Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class ProjectsNav extends Component {
   }
 
   componentWillMount() {
-      this.updateStatesBasedOnWindowSize()
+      this.updateStatesBasedOnWindowSize();
+      configureAnchors({offset: -60});
+      removeHash();
   }
 
   componentDidMount() {
@@ -59,15 +62,16 @@ class ProjectsNav extends Component {
 
     let markDownFiles = this.props.allMarkDownFiles;
     let categoryButtons = ['All', 'CMS', 'E-Commerce', 'Software'];
-
+    
     return (
+      <ScrollableAnchor id="Work">
         <div className='projects-categories'>
           <h3>Web Development  Portfolio</h3>
           <p>From Web Components and UI/UX animations to ASP.NET, E-commerce, CMS systems, and React.JS.
               Check out my latest portfolio projects.</p>
 
           {categoryButtons.map((item) => (
-            <h4 onClick={() => this.setCategory(item.toLowerCase(), markDownFiles)} className='btn-dark'>{item}</h4>
+            <h4 key={item} onClick={() => this.setCategory(item.toLowerCase(), markDownFiles)} className='btn-dark'>{item}</h4>
           ))}
       
           {this.state.showCarousel 
@@ -86,8 +90,8 @@ class ProjectsNav extends Component {
               ))}
             </div>
           }
-
         </div>
+      </ScrollableAnchor>
     );
   }
 }
@@ -97,7 +101,9 @@ class Project extends Component {
     
       return (
         <div className="col-md-4">
-          <article key={Math.random()}>
+          {//TODO: UPDATE SO MATH.RANDOM ONLY HAPPENS WHEN A CATEGORY BUTTON IS CLICKED.
+          }
+          <article >
             <Link to={this.props.frontmatter.path}>
                 <Img sizes={this.props.frontmatter.featuredImage.childImageSharp.sizes}/>
             </Link>

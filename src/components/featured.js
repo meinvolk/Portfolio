@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 const Featured = () => (
-    <ScrollableAnchor id={'page-down'}>
+    <ScrollableAnchor id="Skills">
         <div className="feature-block">
             <div className="container"> 
             <h2>This is going to be the tagline for the featured text block and an important statement to my audience.</h2>
