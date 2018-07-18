@@ -2,7 +2,7 @@ import React, { Component }  from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Carousel from 'nuka-carousel'
-import ScrollableAnchor, { configureAnchors, removeHash } from 'react-scrollable-anchor'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 
 class ProjectsNav extends Component {
   constructor(props) {
@@ -15,7 +15,6 @@ class ProjectsNav extends Component {
   componentWillMount() {
       this.updateStatesBasedOnWindowSize();
       configureAnchors({offset: -60});
-      removeHash();
   }
 
   componentDidMount() {
