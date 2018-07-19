@@ -1,3 +1,9 @@
+.gatsby-image-outer-wrapper {
+    padding: 10px 10px 65px;
+    .gatsby-image-wrapper {
+        border-radius: 3px;
+    }
+}
 .projects-categories {
     text-align: center;
     h4 {
@@ -27,7 +33,28 @@
         height: 300px;
         animation-name: fadeIn;
         animation-duration: 2s;
-        box-shadow: 0px 0px 5px 2px #eee;
+        //box-shadow: 0px 0px 5px 2px #eee;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        .article-text {
+            text-align: left;
+            position: relative;
+            bottom: 50px;
+            width: 85%;
+            border-top: 1px solid #eee;
+            display: block;
+            margin: auto;
+            padding: 10px 0 0 0;
+            h4{
+                margin: 0;
+                padding: 0;
+            }
+            i {
+                float: right;
+                font-size: 25px;
+                color: #b3b3b3;
+            }
+        }
     }
     .hide {
         display: none;

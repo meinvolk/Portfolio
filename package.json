@@ -18,15 +18,11 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
-    "hamburgers": "^0.9.3",
     "i": "^0.3.6",
-    "jquery": "^3.3.1",
     "lodash": "^4.17.10",
     "npm": "^6.1.0",
-    "popper.js": "^1.14.3",
     "react-helmet": "^5.2.0",
     "react-reveal": "^1.2.2",
-    "react-scroll": "^1.7.10",
     "react-scrollable-anchor": "^0.6.1"
   },
   "keywords": [

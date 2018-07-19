@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import Animated from 'animate.css'
 import '../scss/index.scss'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import Navigation from '../components/navigation'
+import Footer from '../components/footer'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -17,10 +19,14 @@ const Layout = ({ children, data }) => (
       ]}
     />
 
+    <Navigation />
+
     <div>
       {children()}
     </div>
     
+    <Footer />
+
   </div>
 )
 

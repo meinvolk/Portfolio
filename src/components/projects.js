@@ -110,7 +110,11 @@ class Project extends Component {
           <article>
             <Link to={this.props.frontmatter.path}>
                 <Img sizes={this.props.frontmatter.featuredImage.childImageSharp.sizes}/>
-            </Link>
+                <div className="article-text">
+                  <h4>{this.props.frontmatter.title}</h4>
+                  <i className="fa fa-angle-right"></i>
+                </div>
+            </Link> 
           </article>
         </div>
       );
