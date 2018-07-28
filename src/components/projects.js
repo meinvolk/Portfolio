@@ -7,7 +7,12 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 class ProjectsNav extends Component {
   constructor(props) {
     super(props);
-    this.state = { category: 'all', showCarousel: false, carouselKey: 0, markDownArray: this.props.allMarkDownFiles };
+    this.state = { 
+      category: 'all', 
+      showCarousel: false, 
+      carouselKey: 0, 
+      markDownArray: this.props.allMarkDownFiles 
+    };
     this.setCategory = this.setCategory.bind(this);
     this.updateStatesBasedOnWindowSize = this.updateStatesBasedOnWindowSize.bind(this);
   }
@@ -103,6 +108,9 @@ class ProjectsNav extends Component {
 }
 
 class Project extends Component {
+
+  
+
   render() {
     
       return (

@@ -63,14 +63,14 @@ module.exports = Navigation
 class MobileNav extends Component {
     constructor(props) {
         super(props);
-        this.state = { display: 'none'};
+        this.state = { display: 'none', checked: 'checked'};
         this.toggleDisplay = this.toggleDisplay.bind(this);
     }
       
     toggleDisplay() {
         this.state.display === 'none' ? 
-        this.setState({ display: 'block' }) :
-        this.setState({ display: 'none' }) ;
+        this.setState({ display: 'block', checked: 'checked' }) :
+        this.setState({ display: 'none', checked: '' }) ;
     }
 
     render() {
@@ -78,7 +78,7 @@ class MobileNav extends Component {
             <nav role="navigation">
                 <div id="menuToggle">
                 
-                    <input onClick={() => this.toggleDisplay()} type="checkbox" />
+                    <input onClick={() => this.toggleDisplay()} className={this.state.checked} />
 
                     <span></span>
                     <span></span>
@@ -87,7 +87,9 @@ class MobileNav extends Component {
                     <ul id="menu" style={{display: this.state.display}}>
                         <Link to='/'><li className="animated slideInDown">Home</li></Link>
                         {this.props.navItems.map((item) => (
-                            <Link to={item} key={item}><li className="animated slideInDown">{item}</li></Link>
+                            <a href={'#' + item} key={item} onClick={() => this.toggleDisplay()}>
+                                <li className="animated slideInDown">{item}</li>
+                            </a>
                         ))}
                     </ul>
                 </div>
