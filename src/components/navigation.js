@@ -63,7 +63,7 @@ module.exports = Navigation
 class MobileNav extends Component {
     constructor(props) {
         super(props);
-        this.state = { display: 'none', checked: 'checked'};
+        this.state = { display: 'none', checked: ''};
         this.toggleDisplay = this.toggleDisplay.bind(this);
     }
       
@@ -78,7 +78,7 @@ class MobileNav extends Component {
             <nav role="navigation">
                 <div id="menuToggle">
                 
-                    <input onClick={() => this.toggleDisplay()} className={this.state.checked} />
+                    <nav onClick={() => this.toggleDisplay()} className={this.state.checked} />
 
                     <span></span>
                     <span></span>
