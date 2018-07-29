@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigation from '../components/navigation'
 import Img from 'gatsby-image'
+import ProjectsNav from '../components/projects'
 
 export default function Template({data}) {
     const { markdownRemark: post } = data;
@@ -11,11 +12,21 @@ export default function Template({data}) {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-md-8'>
-                            <div dangerouslySetInnerHTML={{__html: post.html}}/>
+                            <div className='content' dangerouslySetInnerHTML={{__html: post.html}}/>
+                            
+                            {post.frontmatter.link !== '' ?
+                                <a href={post.frontmatter.link} target='_blank'>
+                                    <div className="btn-red"><p>View Website</p></div>
+                                </a> : ''
+                            }
+                            
                         </div>
                         <div className='col-md-4 sidebar'>
                             <Img sizes={post.frontmatter.sidebarImage.childImageSharp.sizes}/>
                         </div>
+                    </div>
+                    <div className='container projects-block'>
+                        <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
                     </div>
                 </div>
             </div>
@@ -30,6 +41,7 @@ export const postQuery = graphql`
             frontmatter {
                 path
                 title
+                link
                 sidebarImage {
                     childImageSharp {
                       sizes(maxWidth: 600) {
@@ -39,5 +51,13 @@ export const postQuery = graphql`
                 }
             }
         }
+        allMarkdownRemark {
+            edges {
+              node {
+                id
+                ...ProjectQuery
+              }
+            }
+          }
     }
 `

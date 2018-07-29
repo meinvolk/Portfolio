@@ -5,6 +5,7 @@ category: 'cms'
 featuredImage: './Borculo.png'
 sidebarImage: './Borculo.png'
 featuredText: 'Borculo wrecker is an example of a business who would do better with a single page website that would quick serve up information to the client.'
+link: 'http://www.borculoservice.com/'
 ---
 
 #Borculo Wrecker Service

@@ -1,5 +1,12 @@
 .post-page{
     padding: 75px 0 0 0;
+    .btn-red{
+        margin: 50px auto;
+        &:hover {
+            -webkit-animation: pulse 1s;
+            animation: pulse 1s;
+        }
+    }
     h1 {
         font-family:$Lazer;
         color:$red;
@@ -7,6 +14,14 @@
     }
     h2 {
         color: $black;
+    }
+    .content {
+        p {
+            padding: 0 125px 0 0;
+            @include lt-md {
+                padding: 0px;
+            }
+        }
     }
     .sidebar{
         .gatsby-image-wrapper {

@@ -5,6 +5,7 @@ category: 'cms'
 featuredImage: './VANS_Featured.jpg'
 sidebarImage: './VANS_Full.jpg'
 featuredText: 'Van’s Car Wash is a local car wash chain serving seven locations across the West Michigan area.'
+link: 'http://vanscarwash.com/'
 ---
 
 #Van’s Car Wash

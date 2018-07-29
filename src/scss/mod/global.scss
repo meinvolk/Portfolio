@@ -51,20 +51,32 @@ body, html {
     width:1100px;
 }
 
-.gatsby-image-outer-wrapper, 
-.gatsby-image-wrapper {
-  height: 100%; 
-}
-
 .btn-dark {
     color: $black;
     width: 150px;
     background-color: #e2e2e2;
     border-radius: 8px;
+    cursor: pointer;
     &:hover {
         -webkit-animation: pulse 1s;
         animation: pulse 1s;
     }
+}
+
+.btn-red {
+    width: 150px;
+    background-color: $red;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    p{
+        color: $white;
+        margin: auto;
+    }
+}
+
+.gatsby-image-outer-wrapper {
+    height: initial;
 }
 
 // Heading Sizes & fonts

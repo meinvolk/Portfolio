@@ -85,7 +85,7 @@ class MobileNav extends Component {
                     <span></span>
                     
                     <ul id="menu" style={{display: this.state.display}}>
-                        <Link to='/'><li className="animated slideInDown">Home</li></Link>
+                        <a href='/'><li className="animated slideInDown">Home</li></a>
                         {this.props.navItems.map((item) => (
                             <a href={'#' + item} key={item} onClick={() => this.toggleDisplay()}>
                                 <li className="animated slideInDown">{item}</li>
@@ -102,9 +102,9 @@ class DesktopNav extends Component {
     render() {
         return (
             <ul>
-                <li className="animated slideInDown"><Link to='/'>Home</Link></li>
+                <li className="animated slideInDown"><a href='/'>Home</a></li>
                 {this.props.navItems.map((item) => (
-                    <li className="animated slideInDown" key={item}><a href={'#' + item}>{item}</a></li>
+                    <li className="animated slideInDown" key={item}><a href={'/#' + item}>{item}</a></li>
                 ))}
             </ul>
         );

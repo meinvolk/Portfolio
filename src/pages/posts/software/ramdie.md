@@ -5,6 +5,7 @@ category: 'software'
 featuredImage: './Ramdie_Featured.jpg'
 sidebarImage: './Ramdie_Main.png'
 featuredText: 'The design of the project was created to be a simple interface and easy access to CRUD operations within the management panel.'
+link: ''
 ---
 #Ram Die
 ##Job Tracker
@@ -17,6 +18,3 @@ The design of the project was created to be a simple interface and easy access t
 The development of the project took the for of Rapid Application Development (RAD). With that said it was agreed that the web app would be written using ASP.NET Web Forms. Web Forms would allow us to plop all the forms and tables in the application quickly without having to route controllers and models. Another reason is that the site only comprised of 6 pages. The database was a SQLServer express installation. By using Entity Framework Code-First the creation of the database with instantaneous. EF allowed me to focus on the functionality of the job tracker and take a load of writing CRUD operations.
 
 The Job Tracker page is where most of the magic was. Given certain dates the program would look at the dates and compare them against each other. Depending how the dates aligned the color of the boxes would change to indicate if the job was behind, on time, or ahead of schedule.
-
-##Gallery
-Below is the admin panel that is used for CRUD operations on customers, employees, contacts, and jobs. Also pictured is the job tracker page.

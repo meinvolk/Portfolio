@@ -71,8 +71,9 @@ class ProjectsNav extends Component {
 
   render() {
 
-    let markDownFiles = this.props.allMarkDownFiles;
+    let markDownFiles = this.props.allMarkDownFiles; 
     let categoryButtons = ['All', 'CMS', 'E-Commerce', 'Software'];
+    let i = 0;
     
     return (
       <ScrollableAnchor id="Work">
@@ -90,14 +91,20 @@ class ProjectsNav extends Component {
             <div className='row'>
               <Carousel key={this.state.carouselKey}> 
                 {this.state.markDownArray.map(({ node }) => (
-                    <Project key={node.randomKey} frontmatter={node.frontmatter} categoryState={this.state.category} />
+                    <Project 
+                      key={node.randomKey !== undefined ? node.randomKey : i++} 
+                      frontmatter={node.frontmatter} 
+                      categoryState={this.state.category} />
                 ))}
               </Carousel>
             </div>
           : 
             <div className='row'>
               {this.state.markDownArray.map(({ node }) => (
-                <Project key={node.randomKey} frontmatter={node.frontmatter} categoryState={this.state.category} />
+                <Project 
+                  key={node.randomKey !== undefined ? node.randomKey : i++} 
+                  frontmatter={node.frontmatter} 
+                  categoryState={this.state.category} />
               ))}
             </div>
           }
@@ -108,11 +115,7 @@ class ProjectsNav extends Component {
 }
 
 class Project extends Component {
-
-  
-
   render() {
-    
       return (
         <div className="col-md-4">
           <article>

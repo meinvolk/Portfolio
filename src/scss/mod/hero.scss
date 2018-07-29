@@ -9,7 +9,7 @@
             position: relative;
             bottom: 30px;
             @include lt-sm {
-                bottom: 75px;
+                bottom: 40px;
             }
             &:before {
                 content: "";
@@ -106,6 +106,9 @@
             position: absolute;
             bottom: 25px;
             left: 49%;
+            @include lt-sm {
+                left: 46%;
+             }
             a{
                 color:white;
                 font-size: 35px;
