@@ -161,6 +161,12 @@ a {
     }
 }
 
+@mixin lt-xx-sm {
+    @media screen and (max-width: 300px) {
+        @content;
+    }
+}
+
 @mixin lt-x-sm {
     @media screen and (max-width: 350px) {
         @content;

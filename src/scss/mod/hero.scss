@@ -55,10 +55,13 @@
                     font-size: 40px;
                 }
                 @include lt-sm {
-                    font-size: 26px;
+                    font-size: 25px;
                 }
                 @include lt-x-sm {
                     font-size: 20px;
+                }
+                @include lt-xx-sm {
+                    font-size: 17px;
                 }
             }
             h2 {
@@ -90,6 +93,9 @@
                     color: white;
                     &:hover{
                         color: $red;
+                    }
+                    @include lt-xx-sm {
+                        padding: 0 10px;
                     }
                 }
                 @include lt-sm {

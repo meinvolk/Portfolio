@@ -87,7 +87,7 @@ class MobileNav extends Component {
                     <ul id="menu" style={{display: this.state.display}}>
                         <a href='/'><li className="animated slideInDown">Home</li></a>
                         {this.props.navItems.map((item) => (
-                            <a href={'#' + item} key={item} onClick={() => this.toggleDisplay()}>
+                            <a href={'/#' + item} key={item} onClick={() => this.toggleDisplay()}>
                                 <li className="animated slideInDown">{item}</li>
                             </a>
                         ))}
