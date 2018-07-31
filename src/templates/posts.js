@@ -8,6 +8,7 @@ export default function Template({data}) {
 
     return (
         <div>
+            <Navigation />
             <div className='post-page'>
                 <div className='container'>
                     <div className='row'>

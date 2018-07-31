@@ -3,10 +3,12 @@ import Hero from '../components/hero'
 import Featured from '../components/featured'
 import ProjectsNav from '../components/projects'
 import Contact from '../components/contact'
+import Navigation from '../components/navigation'
 
 export default ({ data }) => {
   return (
     <div>
+        <Navigation pageType={'home-page'}/>
         <Hero />
         <Featured />
         <Contact />

@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import Animated from 'animate.css'
 import '../scss/index.scss'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
-import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 
 const Layout = ({ children, data }) => (
@@ -25,9 +24,7 @@ const Layout = ({ children, data }) => (
         { property: 'og:site_name', content: "BensingerBilly" },
       ]}
     />
-
-    <Navigation />
-
+    
     <div>
       {children()}
     </div>
