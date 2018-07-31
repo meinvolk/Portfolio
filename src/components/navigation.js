@@ -53,8 +53,11 @@ class Navigation extends Component {
             if (window.scrollY > 600) {
                 this.setState({isGreaterThan700: true})
             } else {
-            this.setState({isGreaterThan700: false})
+                this.setState({isGreaterThan700: false})
             }
+        }
+        else {
+            this.setState({isGreaterThan700: true})
         }
     }
 
