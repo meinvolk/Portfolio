@@ -5,15 +5,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 class Featured extends Component {
     render() {
-
-        var VisibilitySensor = require('react-visibility-sensor');
-
-        var onChange = function (isVisible) {
-          console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-        };
-
         return (
-            <VisibilitySensor onChange={onChange}>
             <ScrollableAnchor id="Skills">
                 <div className="feature-block">
                     <div className="container"> 
@@ -39,7 +31,6 @@ class Featured extends Component {
                     </div>
                 </div>
             </ScrollableAnchor>
-            </VisibilitySensor>
         );
     }
 };

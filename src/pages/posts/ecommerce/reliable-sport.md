@@ -4,7 +4,7 @@ title: 'Reliable Sport'
 category: 'e-commerce'
 featuredImage: './Reliable_Featured.jpg'
 sidebarImage: './Reliable_Full.jpg'
-featuredText: 'Realiable Sports'
+featuredText: 'Reliable Sports'
 link: 'https://www.reliablesport.com/'
 ---
 

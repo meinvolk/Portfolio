@@ -20,6 +20,7 @@ class ProjectsNav extends Component {
   componentWillMount() {
       this.updateStatesBasedOnWindowSize();
       configureAnchors({offset: -60});
+      
   }
 
   componentDidMount() {
