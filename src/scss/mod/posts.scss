@@ -17,9 +17,9 @@
     }
     .content {
         p {
-            padding: 0 125px 0 0;
+            padding: 0 125px 17px 0;
             @include lt-md {
-                padding: 0px;
+                padding: 0 0px 17px 0;
             }
         }
     }

@@ -12,6 +12,7 @@
         padding:5px 0;
         z-index: $first-floor;
         position: relative;
+        text-align: center;
         @include lt-sm {
             text-align: center;
             width: 100%;

@@ -49,8 +49,9 @@ class Navigation extends Component {
     }
 
     listenScrollEvent = e => {
+        var h = window.innerHeight;
         if(this.props.pageType === 'home-page'){
-            if (window.scrollY > 600) {
+            if (window.scrollY > h) {
                 this.setState({isGreaterThan700: true})
             } else {
                 this.setState({isGreaterThan700: false})
@@ -62,7 +63,7 @@ class Navigation extends Component {
     }
 
     render() {
-        let navItems = ['Skills','Work','About','Contact'];
+        let navItems = ['Skills','Work','Contact'];
         let cssColor = this.state.isGreaterThan700 ? 'black' : 'white';
         return(
             <div>

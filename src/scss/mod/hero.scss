@@ -45,8 +45,9 @@
                 -webkit-background-clip: text;
                 color: transparent;
                 -webkit-text-fill-color: transparent;
-                line-height: 125px;
-                padding: 0 15px;
+                //line-height: 125px;
+                padding: 30px 15px;
+                white-space: nowrap;
                 letter-spacing: 4px;
                 @include lt-x-md {
                     font-size: 65px;
