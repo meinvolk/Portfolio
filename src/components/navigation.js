@@ -1,6 +1,4 @@
 import React, { Component }  from 'react'
-import Link from 'gatsby-link'
-import { goToTop } from 'react-scrollable-anchor'
 
 class Navigation extends Component {
     constructor(props) {
@@ -80,7 +78,7 @@ class Navigation extends Component {
     }
 };
 
-module.exports = Navigation
+export default Navigation
 
 class MobileNav extends Component {
     constructor(props) {

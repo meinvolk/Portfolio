@@ -35,4 +35,4 @@ class Featured extends Component {
     }
 };
 
-module.exports = Featured
+export default Featured

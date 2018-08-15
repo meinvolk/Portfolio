@@ -28,4 +28,4 @@ class Contact extends Component {
     }
 };
 
-module.exports = Contact;
+export default Contact;

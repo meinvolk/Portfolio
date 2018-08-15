@@ -1,5 +1,5 @@
 import React, { Component }  from 'react'
-import Link from 'gatsby-link'
+import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 import Carousel from 'nuka-carousel'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
@@ -121,7 +121,7 @@ class Project extends Component {
         <div className="col-md-4">
           <article>
             <Link to={this.props.frontmatter.path}>
-                <Img sizes={this.props.frontmatter.featuredImage.childImageSharp.sizes}/>
+                <Img fluid={this.props.frontmatter.featuredImage.childImageSharp.fluid}/>
                 <div className="article-text">
                   <h4>{this.props.frontmatter.title}</h4>
                   <i className="fa fa-angle-right"></i>
@@ -133,7 +133,7 @@ class Project extends Component {
   }
 }
 
-module.exports = ProjectsNav
+export default ProjectsNav
 
 export const ProjectQuery = graphql`
 fragment ProjectQuery on MarkdownRemark{
@@ -144,8 +144,8 @@ fragment ProjectQuery on MarkdownRemark{
         featuredText
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 390) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 390) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
