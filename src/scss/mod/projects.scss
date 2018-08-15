@@ -21,7 +21,7 @@
 }
 .projects-block {
     min-height: 800px;
-    margin: 100px 0;
+    margin: 100px auto;
     p {
         padding: 20px 115px 55px;
         @include lt-lg {
