@@ -7,7 +7,7 @@ class Contact extends Component {
             <ScrollableAnchor id="Contact">
                 <div className="contact-form">
                     <div className='container'>
-                        <form action="https://formspree.io/bensingerbilly@gmail.com" method="POST" >
+                        <form name="contact" netlify>
                             <div className='row'>
                                 <div className='col-md-6'>
                                     <input type="text" placeholder="Name" name="name" autoComplete='name'/>
@@ -18,7 +18,7 @@ class Contact extends Component {
                                 <div className='col-md-12'>
                                     <textarea name="message" rows="3" placeholder="Message" />
                                 </div>
-                                <input type="submit" value="Send" />
+                                <button type="submit">Send</button>
                             </div>
                         </form>
                     </div>
