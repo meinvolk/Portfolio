@@ -7,9 +7,12 @@ class Contact extends Component {
             <ScrollableAnchor id="Contact">
                 <div className="contact-form">
                     <div className='container'>
-                        <form name="contact" netlify>
+                        <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
                             <div className='row'>
                                 <div className='col-md-6'>
+                                    <p class="hidden">
+                                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                                    </p>
                                     <input type="text" placeholder="Name" name="name" autoComplete='name'/>
                                 </div>
                                 <div className='col-md-6'>
