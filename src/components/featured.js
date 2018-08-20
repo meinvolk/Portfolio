@@ -9,7 +9,7 @@ class Featured extends Component {
             <ScrollableAnchor id="Skills">
                 <div className="feature-block">
                     <div className="container"> 
-                    <h2 >Find out why I'm a one stop shop for all your web needs!</h2>
+                    <h2>Find out why I'm a one stop shop for all your web needs!</h2>
                     
                         <Fade className="row">
                             <div className="feature-block-item col-md-4">

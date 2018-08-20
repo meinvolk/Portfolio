@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Animated from 'animate.css'
 import '../scss/index.scss'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import Footer from './footer'
