@@ -4,7 +4,8 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 class Contact extends Component {
     render() {
         return (
-            <ScrollableAnchor id="Contact">
+            <>
+                <ScrollableAnchor id="Contact" />
                 <div className="contact-form">
                     <div className='container'>
                         <form name="contact" method="POST" netlify>
@@ -23,7 +24,7 @@ class Contact extends Component {
                         </form>
                     </div>
                 </div>
-            </ScrollableAnchor>
+            </>
         );
     }
 };
