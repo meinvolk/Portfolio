@@ -4,11 +4,10 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 class Contact extends Component {
     render() {
         return (
-            <>
-                <ScrollableAnchor id="Contact" />
+            <ScrollableAnchor id="Contact">
                 <div className="contact-form">
                     <div className='container'>
-                        <form name="contact" method="POST" netlify>
+                        <form name="contact" method="POST" data-netlify="true">
                             <div className='row'>
                                 <div className='col-md-6'>
                                     <input type="text" placeholder="Name" name="name" autoComplete='name'/>
@@ -24,7 +23,7 @@ class Contact extends Component {
                         </form>
                     </div>
                 </div>
-            </>
+            </ScrollableAnchor>
         );
     }
 };
