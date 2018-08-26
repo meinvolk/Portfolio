@@ -4,19 +4,17 @@ class Navigation extends Component {
     constructor(props) {
         super(props)
         this.state = { 
-            isGreaterThan700: false 
+            isGreaterThan700: false,
+            smallDeviceNavigation: false
         };
         this.updateStatesBasedOnWindowSize = this.updateStatesBasedOnWindowSize.bind(this)
-        this.state = { smallDeviceNavigation: false }
     }
 
-    componentWillMount() {
-        this.updateStatesBasedOnWindowSize();
-    }
     componentDidMount() {
         this.updateStatesBasedOnWindowSize();
         window.addEventListener('scroll', this.listenScrollEvent)
         window.addEventListener("resize", this.updateStatesBasedOnWindowSize)
+        window.addEventListener("load", this.updateStatesBasedOnWindowSize)
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateStatesBasedOnWindowSize)

@@ -17,13 +17,9 @@ class ProjectsNav extends Component {
     this.updateStatesBasedOnWindowSize = this.updateStatesBasedOnWindowSize.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
       this.updateStatesBasedOnWindowSize();
       configureAnchors({offset: -60});
-      
-  }
-
-  componentDidMount() {
       window.addEventListener("resize", this.updateStatesBasedOnWindowSize)
   }
   

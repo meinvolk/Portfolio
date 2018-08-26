@@ -1,10 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Animated from 'animate.css'
-import '../scss/index.scss'
-import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import Footer from './footer'
 import { StaticQuery, graphql } from "gatsby"
+import 'animate.css'
+import '../scss/index.scss'
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
+
 
 const Layout = ({ children }) => (
 <StaticQuery
