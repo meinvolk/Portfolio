@@ -1,11 +1,11 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import Hero from '../components/hero'
 import Featured from '../components/featured'
 import ProjectsNav from '../components/projects'
 import Contact from '../components/contact'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
-import { graphql } from "gatsby"
 
 export default ({ data }) => {
   return (
