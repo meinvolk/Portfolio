@@ -15,9 +15,9 @@ export default ({ data }) => {
           <Hero />
           <Featured />
           <Contact />
-          <div className='container projects-block'>
+          {/* <div className='container projects-block'>
             <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
-          </div>
+          </div> */}
       </div>
     </Layout>
   );
