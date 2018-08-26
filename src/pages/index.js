@@ -10,15 +10,13 @@ import { graphql } from "gatsby"
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
           <Navigation pageType={'home-page'}/>
           <Hero />
           <Featured />
           <Contact />
-          {/* <div className='container projects-block'>
+          <div className='container projects-block'>
             <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
-          </div> */}
-      </div>
+          </div>
     </Layout>
   );
 };
