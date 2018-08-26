@@ -2,7 +2,6 @@ import React from 'react'
 import Navigation from '../components/navigation'
 import Img from 'gatsby-image'
 import { graphql } from "gatsby"
-import ProjectsNav from '../components/projects'
 import Layout from '../components/layout'
 
 export default function Template({data}) {
@@ -28,9 +27,6 @@ export default function Template({data}) {
                             <div className='col-md-4 sidebar'>
                                 <Img fluid={post.frontmatter.sidebarImage.childImageSharp.fluid}/>
                             </div>
-                        </div>
-                        <div className='container projects-block'>
-                            <ProjectsNav allMarkDownFiles={data.allMarkdownRemark.edges}/>
                         </div>
                     </div>
                 </div>
