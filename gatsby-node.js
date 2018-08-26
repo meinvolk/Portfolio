@@ -4,7 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = ({boundActionCreators, graphql}) => {
   const {createPage} = boundActionCreators;
 
-  const postTemplate = path.resolve('src/pages/posts.js');  
+  const postTemplate = path.resolve('src/templates/posts.js');  
 
   return graphql(`{
     allMarkdownRemark {
